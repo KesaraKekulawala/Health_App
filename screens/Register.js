@@ -1,58 +1,39 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
+import GlobalStyles from '../styles/GlobalStyles';
 
-export default function Register ({ navigation }){
-    const [ username, setUsername] = useState('');
-    const [ password, setPassword] = useState('');
+export default function Register({ navigation }) {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-    const handleRegister = () => {
-        if (username && password){
-            Alert.alert('Registration Successfull');
-            navigation.navigate('Login');
-        } else {
-            Alert.alert('Please fill in all fields');
-        }
-    };
+  const handleRegister = () => {
+    if (username && password) {
+      Alert.alert('Registration Successful');
+      navigation.navigate('Login');
+    } else {
+      Alert.alert('Please fill in all fields');
+    }
+  };
 
-    return (
-        <View style={styles.container}> 
-        <Text style = {styles.title}>Register</Text>
-        <TextInput 
-            style = {styles.input} 
-            placeholder = "Username" 
-            value = {username} 
-            onChangeText = {setUsername}
-        />
-        <TextInput 
-            style = {styles.input} 
-            placeholder = "Password" 
-            secureTextEntry
-            value = {password} 
-            onChangeText = {setPassword}
-        />
-
-        <Button title='Register' onPress={handleRegister} />
-        
-        </View>
-    );
+  return (
+    <View style={GlobalStyles.container}>
+      <Text style={GlobalStyles.header}>Register</Text>
+      <TextInput
+        style={GlobalStyles.input}
+        placeholder="Username"
+        value={username}
+        onChangeText={setUsername}
+      />
+      <TextInput
+        style={GlobalStyles.input}
+        placeholder="Password"
+        secureTextEntry
+        value={password}
+        onChangeText={setPassword}
+      />
+      <TouchableOpacity style={[GlobalStyles.button, GlobalStyles.registerButton]} onPress={handleRegister}>
+        <Text style={GlobalStyles.buttonText}>Register</Text>
+      </TouchableOpacity>
+    </View>
+  );
 }
-
-const styles = StyleSheet.create ({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        padding: 20,
-    },
-    title: {
-        fontSize: 24,
-        marginBottom: 20,
-        textAlign:'center',
-    },
-    input: {
-        borderWidth: 1,
-        borderColor: '#ccc',
-        padding: 10,
-        marginBottom: 20,
-        borderRadius: 5,
-    },
-});
