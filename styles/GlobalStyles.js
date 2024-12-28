@@ -1,9 +1,20 @@
+import { StyleSheet } from "react-native";
+
 const GlobalStyles = StyleSheet.create({
     container: {
       flex: 1,
       padding: 20,
       backgroundColor: '#F5F5F5', // Light background
     },
+    
+    authcontainer: {
+        flex: 1,
+        justifyContent: 'center',
+        //alignItems: 'center', // Center items horizontally
+        padding: 20,
+        backgroundColor: '#F5F5F5', // Light background
+      },
+    
     header: {
       fontSize: 22,
       fontWeight: 'bold',
@@ -78,6 +89,6 @@ const GlobalStyles = StyleSheet.create({
       fontWeight: 'bold',
     },
   });
-  
+
+
   export default GlobalStyles;
-  

@@ -16,7 +16,7 @@ export default function Register({ navigation }) {
   };
 
   return (
-    <View style={GlobalStyles.container}>
+    <View style={GlobalStyles.authcontainer}>
       <Text style={GlobalStyles.header}>Register</Text>
       <TextInput
         style={GlobalStyles.input}
