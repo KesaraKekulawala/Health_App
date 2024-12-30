@@ -94,6 +94,7 @@ const GlobalStyles = StyleSheet.create({
       color: '#FFFFFF', // White text
     },
     input: {
+      width:"100%",
       borderWidth: 1,
       borderColor: '#ccc',
       padding: 10,
