@@ -10,10 +10,31 @@ const GlobalStyles = StyleSheet.create({
     authcontainer: {
         flex: 1,
         justifyContent: 'center',
-        //alignItems: 'center', // Center items horizontally
         padding: 20,
         backgroundColor: '#F5F5F5', // Light background
-      },
+    },
+
+    backgroundImage: {
+        flex: 1,
+        resizeMode: 'cover',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    headerContainer: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      width: '100%',
+      paddingHorizontal: 10,
+      marginTop: 40,
+    },
+
+    Homeheader: {
+      fontSize: 22,
+      fontWeight: 'bold',
+      color: '#00897B', // Teal
+    },
     
     header: {
       fontSize: 22,
@@ -22,11 +43,20 @@ const GlobalStyles = StyleSheet.create({
       marginBottom: 20,
       color: '#00897B', // Teal
     },
+
+    logoutButton: {
+      backgroundColor: '#00897B', // Logout button background color
+      borderRadius: 15,
+      padding: 10
+      ,
+    },
+
     card: {
       padding: 15,
       backgroundColor: '#FFFFFF', // White cards
       borderRadius: 10,
       marginBottom: 10,
+      marginTop:7,
       elevation: 3,
       shadowColor: '#000',
       shadowOffset: { width: 0, height: 2 },
@@ -54,9 +84,9 @@ const GlobalStyles = StyleSheet.create({
       color: '#555',
     },
     flag: {
-      width: 50,
-      height: 30,
-      borderRadius: 5,
+      width: 90,
+      height: 60,
+      borderRadius: 15,
       marginLeft: 10,
     },
     floatingText: {

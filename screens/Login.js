@@ -15,6 +15,7 @@ export default function Login({ navigation }) {
   };
 
   return (
+    
     <View style={GlobalStyles.authcontainer}>
       <Text style={GlobalStyles.header}>Login</Text>
       <TextInput
