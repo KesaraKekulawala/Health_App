@@ -27,6 +27,7 @@ export default function Register({ navigation }) {
 
   return (
     <View style={GlobalStyles.authcontainer}>
+      <Text style={GlobalStyles.appName}>Corona Track</Text>
       <Text style={GlobalStyles.header}>Register</Text>
       <TextInput
         style={GlobalStyles.input}
@@ -75,6 +76,12 @@ export default function Register({ navigation }) {
       <TouchableOpacity style={[GlobalStyles.button, GlobalStyles.registerButton]} onPress={handleRegister}>
         <Text style={GlobalStyles.buttonText}>Register</Text>
       </TouchableOpacity>
+      <Text style={GlobalStyles.navSentence}>
+        Already have an Account?{' '}
+      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+        <Text style={GlobalStyles.LinktoNext}> Login</Text>
+      </TouchableOpacity>
+      </Text>
     </View>
   );
 }

@@ -1,3 +1,4 @@
+import { Linking } from "react-native";
 import { StyleSheet } from "react-native";
 
 const GlobalStyles = StyleSheet.create({
@@ -19,6 +20,14 @@ const GlobalStyles = StyleSheet.create({
         resizeMode: 'cover',
         justifyContent: 'center',
         alignItems: 'center',
+    },
+
+    appName: {
+      fontSize: 28,
+      fontWeight: 'bold',
+      color: '#2196F3', 
+      marginBottom: 20,
+      textAlign: 'center',
     },
 
     headerContainer: {
@@ -93,6 +102,23 @@ const GlobalStyles = StyleSheet.create({
       fontSize: 18,
       color: '#FFFFFF', // White text
     },
+    navSentence: {
+        flexDirection: 'row',
+        color: '#00897B',
+        fontSize: 16,
+        fontWeight: 'bold',
+        textAlign: 'center'
+      
+    },
+    LinktoNext: {
+      paddingTop: 5,
+      color: '#2196F3',
+      fontSize: 16,
+      fontWeight: 'bold',
+      
+    },
+
+    
     input: {
       width:"100%",
       borderWidth: 1,

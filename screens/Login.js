@@ -19,6 +19,7 @@ export default function Login({ navigation }) {
   return (
     
     <View style={GlobalStyles.authcontainer}>
+      <Text style={GlobalStyles.appName}>Corona Track</Text>
       <Text style={GlobalStyles.header}>Login</Text>
       <TextInput
         style={GlobalStyles.input}
@@ -48,12 +49,17 @@ export default function Login({ navigation }) {
       <TouchableOpacity style={[GlobalStyles.button, GlobalStyles.loginButton]} onPress={handleLogin}>
         <Text style={GlobalStyles.buttonText}>Login</Text>
       </TouchableOpacity>
-      <TouchableOpacity
+      <Text style={GlobalStyles.navSentence}>Don't have an Account? 
+        <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+          <Text style={GlobalStyles.LinktoNext}>   Register</Text>
+          </TouchableOpacity>
+      </Text>
+      {/* <TouchableOpacity
         style={[GlobalStyles.button, GlobalStyles.registerButton]}
         onPress={() => navigation.navigate('Register')}
       >
         <Text style={GlobalStyles.buttonText}>Register</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 }
